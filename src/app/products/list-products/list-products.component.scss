@@ -260,13 +260,14 @@ header {
   text-align: center;
   color: #fff;
   background-attachment: scroll;
-  background-image: url(https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fwp-content%2Fblogs.dir%2F6%2Ffiles%2F2019%2F10%2Fpuma-karl-lagerfeld-sneaker-collection-apparel-lookbook-14.jpg?quality=95&w=1170&cbr=1&q=90&fit=max);
+  background-image: url(https://images.unsplash.com/photo-1597874040787-a644c3d001cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
   background-position: center center;
   background-repeat: none;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  object-fit: cover;
 }
 
 header .intro-text {
@@ -329,14 +330,14 @@ section h3.section-subheading {
   margin-bottom: 75px;
   text-transform: none;
   font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
+  font-size: 48px;
   font-style: italic;
   font-weight: 400;
 }
 
 @media(min-width:768px) {
   section {
-      padding: 150px 0;
+      padding: 40px 0;
   }
 }
 
@@ -345,19 +346,30 @@ section h3.section-subheading {
   text-transform: none;
 }
 
-#portfolio .portfolio-item {
-  right: 0;
-  margin: 0 0 15px;
+#product-list .product-list-item {
+  margin: 20px;
 }
 
-#portfolio .portfolio-item .portfolio-link {
+.product-list-item {
+  box-shadow:  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+#product-list .product-list-item .product-list-link {
   display: block;
   position: relative;
   margin: 0 auto;
   max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+#product-list .product-list-item .product-list-link .product-list-hover {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -368,11 +380,11 @@ section h3.section-subheading {
   transition: all ease .5s;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+#product-list .product-list-item .product-list-link .product-list-hover:hover {
   opacity: 1;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+#product-list .product-list-item .product-list-link .product-list-hover .product-list-hover-content {
   position: absolute;
   top: 50%;
   width: 100%;
@@ -383,16 +395,16 @@ section h3.section-subheading {
   color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+#product-list .product-list-item .product-list-link .product-list-hover .product-list-hover-content i {
   margin-top: -12px;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#product-list .product-list-item .product-list-link .product-list-hover .product-list-hover-content h3,
+#product-list .product-list-item .product-list-link .product-list-hover .product-list-hover-content h4 {
   margin: 0;
 }
 
-#portfolio .portfolio-item .portfolio-caption {
+#product-list .product-list-item .product-list-caption {
   margin: 0 auto;
   padding: 25px;
   max-width: 400px;
@@ -400,24 +412,24 @@ section h3.section-subheading {
   background-color: #fff;
 }
 
-#portfolio .portfolio-item .portfolio-caption h4 {
+#product-list .product-list-item .product-list-caption h4 {
   margin: 0;
   text-transform: none;
 }
 
-#portfolio .portfolio-item .portfolio-caption p {
+#product-list .product-list-item .product-list-caption p {
   margin: 0;
   font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 16px;
   font-style: italic;
 }
 
-#portfolio * {
+#product-list * {
   z-index: 2;
 }
 
 @media(min-width:767px) {
-  #portfolio .portfolio-item {
+  #product-list .product-list-item {
       margin: 0 0 30px;
   }
 }
@@ -622,26 +634,6 @@ section h3.section-subheading {
   }
 }
 
-.team-member {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.team-member img {
-  margin: 0 auto;
-  border: 7px solid #fff;
-}
-
-.team-member h4 {
-  margin-top: 25px;
-  margin-bottom: 0;
-  text-transform: none;
-}
-
-.team-member p {
-  margin-top: 0;
-}
-
 
 section#contact {
   background-color: #222;
@@ -760,7 +752,7 @@ ul.social-buttons li a:active {
   outline: 0;
 }
 
-.portfolio-modal .modal-content {
+.product-list-modal .modal-content {
   padding: 100px 0;
   min-height: 100%;
   border: 0;
@@ -771,32 +763,32 @@ ul.social-buttons li a:active {
   box-shadow: none;
 }
 
-.portfolio-modal .modal-content h2 {
+.product-list-modal .modal-content h2 {
   margin-bottom: 15px;
   font-size: 3em;
 }
 
-.portfolio-modal .modal-content p {
+.product-list-modal .modal-content p {
   margin-bottom: 30px;
 }
 
-.portfolio-modal .modal-content p.item-intro {
+.product-list-modal .modal-content p.item-intro {
   margin: 20px 0 30px;
   font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 16px;
   font-style: italic;
 }
 
-.portfolio-modal .modal-content ul.list-inline {
+.product-list-modal .modal-content ul.list-inline {
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-.portfolio-modal .modal-content img {
+.product-list-modal .modal-content img {
   margin-bottom: 30px;
 }
 
-.portfolio-modal .close-modal {
+.product-list-modal .close-modal {
   position: absolute;
   top: 25px;
   right: 25px;
@@ -806,11 +798,11 @@ ul.social-buttons li a:active {
   cursor: pointer;
 }
 
-.portfolio-modal .close-modal:hover {
+.product-list-modal .close-modal:hover {
   opacity: .3;
 }
 
-.portfolio-modal .close-modal .lr {
+.product-list-modal .close-modal .lr {
   z-index: 1051;
   width: 1px;
   height: 75px;
@@ -821,7 +813,7 @@ ul.social-buttons li a:active {
   transform: rotate(45deg);
 }
 
-.portfolio-modal .close-modal .lr .rl {
+.product-list-modal .close-modal .lr .rl {
   z-index: 1052;
   width: 1px;
   height: 75px;
@@ -853,12 +845,42 @@ body {
   webkit-tap-highlight-color: #1ee2e7;
 }
 
-.header-card {
-  display: block;
-  align-items: center;
-  justify-content: center;
+
+
+.jumbotron {
+  color: white;
+  background-image: url("https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fwp-content%2Fblogs.dir%2F6%2Ffiles%2F2019%2F10%2Fpuma-karl-lagerfeld-sneaker-collection-apparel-lookbook-14.jpg?quality=95&w=1170&cbr=1&q=90&fit=max");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  object-fit: cover;
+  height: 50vh;
+
+  .display-4 {
+    transform: translateY(0px);
+    font-size: 50px;
+
+    @media(min-width:768px) {
+      font-size: 72px;
+          transform: translateY(110px);
+    }
+  }
 }
 
-#my-row {
-  flex-wrap: unset !important;
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    border-radius: 15px;
+    width: 200px;
+  }
+}
+
+.product-list-img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
 }

@@ -1,0 +1,45 @@
+  <body id="product-list" class="index" data-pinterest-extension-installed="cr1.3.4">
+
+    <!-- Portfolio Grid Section -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="col-lg-12 text-center">
+          <h1 class="display-4">An overview of products</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a *ngIf="isAuthenticated" [routerLink]="['/products/products-create']" class="page-scroll btn btn-xl py-4">Add Products</a>
+      </div>
+  </div>
+
+    <section id="product-list" class="bg-light-gray">
+      <div class="container">
+          <div class="row">
+              <div
+              *ngFor="let product of products; let i = index"
+              [class.active]="i == currentIndex"
+              (click)="setCurrentProduct(product, i)"
+              class="col-md-4 col-sm-6 product-list-item">
+                  <a routerLink="/products/{{ product._id }}"  class="product-list-link">
+                      <div class="product-list-hover">
+                          <div class="product-list-hover-content">
+                            <button type="button" class="btn btn-info" (click)="addedCart(product)">Add to Cart</button>
+                          </div>
+                      </div>
+                      <img class="product-list-img" src="{{ product.image }}" alt="{{ product.name }}">
+                  </a>
+                  <div class="product-list-caption">
+                      <h4>{{ product.name }}</h4>
+                      <div class="button-container">
+                        <button type="button" class="btn btn-warning" routerLink="/products/{{ product._id }}">Details</button>
+                        <button type="button" class="btn btn-info" (click)="addedCart(product)">Add to Cart</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</body>

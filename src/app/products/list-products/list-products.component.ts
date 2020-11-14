@@ -2,18 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 
 import { Subscription } from 'rxjs';
-import { AccountService } from '../services/account.service';
+import { AccountService } from '../../services/account.service';
 import { Store } from '@ngrx/store';
-import * as fromApp from '../store/app.reducer';
-import * as cartActions from '../products/cart/store/cart.actions';
+import * as fromApp from '../../store/app.reducer';
+import * as cartActions from '../cart/store/cart.actions';
+
+
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-list-products',
+  templateUrl: './list-products.component.html',
+  styleUrls: ['./list-products.component.scss']
 })
-
-export class HeaderComponent implements OnInit {
+export class ListProductsComponent implements OnInit {
 
   products: any;
   currentProduct = null;
@@ -39,7 +40,7 @@ export class HeaderComponent implements OnInit {
     this.productService.getAll()
       .subscribe(
         data => {
-          this.products = data.slice(-3);
+          this.products = data;
           console.log(data);
         },
         error => {

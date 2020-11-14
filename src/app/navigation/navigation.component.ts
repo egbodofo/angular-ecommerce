@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { AccountService } from '../services/account.service';
 
 
 @Component({
@@ -8,15 +10,20 @@ import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  constructor() { }
+  isAuthenticated = false;
+  private userSub: Subscription;
 
-  @Output() featureSelected = new EventEmitter<string>();
-
-  onSelect(feature: string) {
-    this.featureSelected.emit(feature);
-  }
+  constructor(
+    private authService: AccountService
+  ) { }
 
   ngOnInit(): void {
+    this.userSub = this.authService.user.subscribe(user => {
+      this.isAuthenticated = !!user;
+    });
   }
 
+  onLogout() {
+    this.authService.logout();
+  }
 }

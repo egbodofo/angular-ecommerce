@@ -1,0 +1,94 @@
+
+.jumbotron {
+  color: white;
+  background-image: url("https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fwp-content%2Fblogs.dir%2F6%2Ffiles%2F2019%2F10%2Fpuma-karl-lagerfeld-sneaker-collection-apparel-lookbook-14.jpg?quality=95&w=1170&cbr=1&q=90&fit=max");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  object-fit: cover;
+  height: 50vh;
+
+  .display-4 {
+    transform: translateY(20px);
+    font-size: 72px;
+  }
+}
+
+.product-buttons {
+  display: block;
+  align-items: center;
+  justify-content: center;
+
+  @media(min-width:767px) {
+    flex-direction: row;
+    height: 100px;
+  }
+
+  .btn {
+    width: 100px;
+    height: 50%;
+    font-size: 16px;
+    margin: 10px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    -webkit-transition: ease-in-out 220ms;
+    -moz-transition: ease-in-out 220ms;
+    -ms-transition: ease-in-out 220ms;
+    -o-transition: ease-in-out 220ms;
+    transition: ease-in-out 220ms;
+    cursor: pointer;
+  }
+
+  .wishlist {
+    border: 2px solid #F71568;
+    background:transparent;
+    color: #F71568;
+    animation: fadeWish 1s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 1s;
+
+    &:hover {
+      background: #F71568;
+      color: #FFF;
+      box-shadow: 0 0 26px #F71568;
+    }
+  }
+
+  .buy {
+    border: none;
+    background: #F71568;
+    color: #FFF;
+    animation: fadeBuy 1s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 1s;
+
+    &:hover {
+      box-shadow: 0 0 26px #F71568;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  padding-bottom: 40px;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+
+img{
+  width: 270px;
+  height: 270px;
+
+  @media(min-width:767px) {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.product-details-cover {
+  border: 1px solid rgb(12, 59, 212);
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

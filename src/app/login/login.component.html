@@ -7,18 +7,30 @@
 </div>
 
 <div id="register" class="login-form">
-  <form>
+  <form id="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
       <div class="section">Email</div>
-      <div class="inner-wrap">
-          <label>Email Address <input type="email" name="field2" /></label>
+      <div class="inner-wrap form-group">
+          <label>Email Address 
+            <input formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" type="email" name="field2" />
+          </label>
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+        </div>
       </div>
 
       <div class="section">Passwords</div>
-          <div class="inner-wrap">
-          <label>Password <input type="password" name="field4" /></label>
-      </div>
-      <div class="button-section">
-       <input type="submit" name="Login" />
-      </div>
+          <div class="inner-wrap form-group">
+          <label>Password 
+            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"  name="field4" />
+          </label>
+      </div>v>
+
+      <div class="form-group button-section">
+        <button [disabled]="loading" class="mx-2 btn btn-outline-warning btn-md">
+            <span *ngIf="loading" class="mr-1 spinner-border spinner-border-sm"></span>
+            Login
+        </button>
+        <a routerLink="/register" class="mx-2 btn btn-outline-warning btn-md">Register</a>
+    </div>
   </form>
-  </div>
+</div>

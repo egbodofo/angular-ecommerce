@@ -9,7 +9,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { RegisterComponent } from './register/register.component';
 import { TeamComponent } from './team/team.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HeaderComponent},
   {path: 'about', component: AboutComponent},
@@ -21,7 +21,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
