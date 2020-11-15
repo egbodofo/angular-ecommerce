@@ -13,7 +13,9 @@ import { SharedModule } from '../shared/shared.module';
 import { CartComponent } from './cart/cart.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditProductComponent } from './edit-product/edit-product.component';
-// import { CheckoutComponent } from './checkout/checkout.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { PayComponent } from './pay/pay.component';
+
 
 @NgModule({
   imports: [
@@ -26,12 +28,13 @@ import { EditProductComponent } from './edit-product/edit-product.component';
   ],
   declarations: [
     ProductsComponent,
-    ListProductsComponent,
     CreateProductComponent,
     ProductDetailsComponent,
-    CartComponent,
+    ListProductsComponent,
     EditProductComponent,
-    // CheckoutComponent
+    CartComponent,
+    CheckoutComponent,
+    PayComponent
   ]
 })
 export class ProductsModule {}

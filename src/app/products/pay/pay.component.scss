@@ -1,0 +1,20 @@
+
+
+
+
+
+.jumbotron {
+  color: white;
+  background-image: url("https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fwp-content%2Fblogs.dir%2F6%2Ffiles%2F2019%2F10%2Fpuma-karl-lagerfeld-sneaker-collection-apparel-lookbook-14.jpg?quality=95&w=1170&cbr=1&q=90&fit=max");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  object-fit: cover;
+  height: 50vh;
+
+  .display-4 {
+    transform: translateY(150px);
+    font-size: 72px;
+  }
+}

@@ -50,7 +50,7 @@ export class ProductDetailsComponent implements OnInit {
     this.productService.delete(this.currentProduct._id)
       .subscribe(
         response => {
-          this.router.navigate(['/products/all-products']);
+          this.router.navigate(['/products/products-list']);
         },
         error => {
           console.log(error);
