@@ -4,16 +4,18 @@ import * as fromApp from '../../store/app.reducer';
 import { Observable } from 'rxjs';
 import * as cartActions from './store/cart.actions';
 
-
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss']
 })
+
+
 export class CartComponent implements OnInit {
   cartProducts: Observable<Array<any>>;
   cartTotal: any = this.store.select(store => store.cartList.total);
   total: any;
+  hasData = false;
 
   constructor(
     private store: Store<fromApp.AppState>
@@ -23,6 +25,7 @@ export class CartComponent implements OnInit {
     this.cartProducts = this.store.select(store => store.cartList.addedItems);
     this.cartTotal.subscribe( currentTotal => {
       this.total = currentTotal;
+      this.hasData = !!currentTotal;
     });
   }
 

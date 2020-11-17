@@ -22,6 +22,7 @@ import { BrowserModule } from '@angular/platform-browser';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     FormsModule,
+    CommonModule,
     HttpClientModule,
     RouterModule,
     BrowserModule,

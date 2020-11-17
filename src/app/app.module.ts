@@ -39,6 +39,7 @@ import { StoreModule } from '@ngrx/store';
     BrowserModule,
     AppRoutingModule,
     ProductsModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,

@@ -6,11 +6,17 @@
   </div>
 </div>
 
+<!-- <section ngif="!hasData">
+  <div>
+    <p>Hello</p>
+  </div>
+</section> -->
+
 <section class="page my-5 h-100">
 	<div id="store_cart">
 		<ul class="cart_head">
 			<li class="cart_head_title">
-				My Cart 
+				My Cart
 			</li>
 			<li class="cart_head_product">
 				Product Name
@@ -32,7 +38,7 @@
 			<li class="cart_product_col">
 				<p>{{ product.name }}</p>
 			</li>
-			 
+
       	<li class="cart_options_col">
 				<span>Quantity: </span>
           <div
@@ -60,7 +66,7 @@
 				<h2>#{{ product.price * product.quantity }}</h2>
 			</li>
     </ul>
-    
+
   </div>
 
   <div class="mt-4 mb-4 bag-total">
@@ -78,10 +84,5 @@
         </button>
     </div>
   </div>
-  
+
 </section>
-<!-- <section>
-  <div ng-if="cartProducts.length >= 0">
-    <p>Hello</p>
-  </div>
-</section> -->

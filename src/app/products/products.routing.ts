@@ -6,6 +6,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PayComponent } from './pay/pay.component';
+import { AuthGuard } from '../auth.guard';
 
 
 
@@ -19,11 +20,11 @@ export const ProductRoutes: Routes = [
       },
       {
         path: 'pay',
-        component: PayComponent,
+        component: PayComponent, canActivate: [AuthGuard]
       },
       {
         path: 'products-create',
-        component: CreateProductComponent,
+        component: CreateProductComponent, canActivate: [AuthGuard]
       },
       {
         path: 'cart',
@@ -31,7 +32,7 @@ export const ProductRoutes: Routes = [
       },
       {
         path: 'checkout',
-        component: CheckoutComponent,
+        component: CheckoutComponent, canActivate: [AuthGuard]
       },
       {
         path: ':id',
