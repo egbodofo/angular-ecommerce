@@ -8,6 +8,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { RegisterComponent } from './register/register.component';
 import { TeamComponent } from './team/team.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -18,6 +19,8 @@ export const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
+  // {path: '404', component: NotfoundComponent},
+  // {path: '**', redirectTo: '/404'}
 ];
 
 @NgModule({

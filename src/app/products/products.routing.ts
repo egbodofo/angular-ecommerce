@@ -7,6 +7,7 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PayComponent } from './pay/pay.component';
 import { AuthGuard } from '../auth.guard';
+import { NotfoundComponent } from '../notfound/notfound.component';
 
 
 
@@ -44,4 +45,12 @@ export const ProductRoutes: Routes = [
       },
     ],
   },
+  // {
+  //   path: '404',
+  //   component: NotfoundComponent
+  // },
+  // {
+  //   path: '**',
+  //   redirectTo: '/404'
+  // }
 ];

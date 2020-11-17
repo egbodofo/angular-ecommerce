@@ -1,65 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register</title>
+  </head>
 
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Sign up & get started!</h1>
-  </div>
-</div>
-
-<div id="register" class="register-form">
-  <form id="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
-      <div class="section">Full Name</div>
-      <div class="inner-wrap">
-          <label>First Name 
-              <input type="text" name="field1" formControlName="firstname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
-          </label>
-          <span *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
-            <p *ngIf="f.firstname.errors.required">First name is required</p>
-          </span>
-
-          <label>Last Name 
-            <input type="text" name="field1" formControlName="lastname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
-          </label>
-          <span *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
-            <p *ngIf="f.lastname.errors.required">Last name is required</p>
-          </span>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Sign up & get started!</h1>
       </div>
+    </div>
 
-      <div class="section">Email & Phone</div>
-      <div class="inner-wrap form-group">
-          <label>Email Address 
-            <input type="email" name="field2" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-          </label>
-          <span *ngIf="submitted && f.email.errors" class="invalid-feedback">
-            <p *ngIf="f.email.errors.required">Enter a valid email address</p>
-          </span>
+    <div id="register" class="register-form">
+      <form id="login-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="section">Full Name</div>
+          <div class="inner-wrap">
+              <label>First Name 
+                  <input type="text" name="field1" formControlName="firstname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
+              </label>
+              <span *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+                <p *ngIf="f.firstname.errors.required">First name is required</p>
+              </span>
 
-          <label>Phone Number 
-            <input type="text" name="field3" formControlName="telephone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.telephone.errors }" />
-          </label>
-          <span *ngIf="submitted && f.telephone.errors" class="invalid-feedback">
-            <p *ngIf="f.telephone.errors.required">Phone number is required</p>
-          </span>
-      </div>
-
-      <div class="section">Passwords</div>
-          <div class="inner-wrap form-group">
-            <label>Password 
-              <input type="password" name="field4" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-            </label>
-            <span *ngIf="submitted && f.password.errors" class="invalid-feedback">
-              <p *ngIf="f.password.errors.required">Password is required</p>
-              <p *ngIf="f.password.errors.minlength">Password must be at least 6 characters</p>
-            </span>
+              <label>Last Name 
+                <input type="text" name="field1" formControlName="lastname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
+              </label>
+              <span *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                <p *ngIf="f.lastname.errors.required">Last name is required</p>
+              </span>
           </div>
 
-      <div class="button-section form-group">
-        <button name="Sign Up" [disabled]="loading" class="mx-2 btn btn-outline-warning btn-md">
-          <span *ngIf="loading" class="mr-1 spinner-border spinner-border-sm"></span>
-          Register
-        </button>
-        <span class="privacy-policy">
-            <input class="pr-2" type="checkbox" name="field7">Agree to our Terms and Policy.
-        </span>
+          <div class="section">Email & Phone</div>
+          <div class="inner-wrap form-group">
+              <label>Email Address 
+                <input type="email" name="field2" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+              </label>
+              <span *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <p *ngIf="f.email.errors.required">Enter a valid email address</p>
+              </span>
+
+              <label>Phone Number 
+                <input type="text" name="field3" formControlName="telephone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.telephone.errors }" />
+              </label>
+              <span *ngIf="submitted && f.telephone.errors" class="invalid-feedback">
+                <p *ngIf="f.telephone.errors.required">Phone number is required</p>
+              </span>
+          </div>
+
+          <div class="section">Passwords</div>
+              <div class="inner-wrap form-group">
+                <label>Password 
+                  <input type="password" name="field4" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                </label>
+                <span *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <p *ngIf="f.password.errors.required">Password is required</p>
+                  <p *ngIf="f.password.errors.minlength">Password must be at least 6 characters</p>
+                </span>
+              </div>
+
+          <div class="button-section form-group">
+            <button name="Sign Up" [disabled]="loading" class="mx-2 btn btn-outline-warning btn-md">
+              <span *ngIf="loading" class="mr-1 spinner-border spinner-border-sm"></span>
+              Register
+            </button>
+            <span class="privacy-policy">
+                <input class="pr-2" type="checkbox" name="field7">Agree to our Terms and Policy.
+            </span>
+          </div>
+      </form>
       </div>
-  </form>
-  </div>
+
+  </body>
+</html>

@@ -1,115 +1,122 @@
-<body class="hero-anime">
-
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title></title>
-    <script>
-
-
-/* Please ❤ this if you like it! */
-
-
-(function($) { "use strict";
-
-$(function() {
-  var header = $(".start-style");
-  $(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-  
-    if (scroll >= 10) {
-      header.removeClass('start-style').addClass("scroll-on");
-    } else {
-      header.removeClass("scroll-on").addClass('start-style');
-    }
-  });
-});		
-  
-//Animation
-
-$(document).ready(function() {
-  $('body.hero-anime').removeClass('hero-anime');
-});
-
-//Menu On Hover
-  
-$('body').on('mouseenter mouseleave','.nav-item',function(e){
-    if ($(window).width() > 750) {
-      var _d=$(e.target).closest('.nav-item');_d.addClass('show');
-      setTimeout(function(){
-      _d[_d.is(':hover')?'addClass':'removeClass']('show');
-      },1);
-    }
-});	
-
-//Switch light/dark
-
-$("#switch").on('click', function () {
-  if ($("body").hasClass("dark")) {
-    $("body").removeClass("dark");
-    $("#switch").removeClass("switched");
-  }
-  else {
-    $("body").addClass("dark");
-    $("#switch").addClass("switched");
-  }
-});  
-
-})(jQuery); 
-    </script>
   </head>
 
-	<div class="navigation-wrap bg-light start-header start-style">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<nav class="navbar navbar-expand-md navbar-light">
-					
-            <a class="navbar-brand page-scroll" href="/">FootyGasm</a>
-						
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						
-						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-							<ul class="navbar-nav ml-auto py-4 py-md-0">
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" routerLinkActive="active" routerLink="/">Home</a>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLinkActive="active" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" routerLinkActive="active" routerLink="/products/products-list">Men</a>
-										<a class="dropdown-item" routerLinkActive="active" routerLink="/products/products-list">Women</a>
-										<a class="dropdown-item" routerLinkActive="active" routerLink="/products/products-list">Children</a>
-									</div>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLinkActive="active" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-									<div class="dropdown-menu">
-                    <a class="dropdown-item" routerLinkActive="active" routerLink="/about">About us</a>
-                    <a class="dropdown-item" routerLinkActive="active" routerLink="/team">Team</a>
-										<a class="dropdown-item" routerLinkActive="active" routerLink="/portfolio">Portfolio</a>
-										<a class="dropdown-item" routerLinkActive="active" routerLink="/contact">Contact us</a>
-									</div>
-                </li>
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" routerLinkActive="active" routerLink="products/cart">Cart</a>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" *ngIf="!isAuthenticated">
-									<a class="nav-link" routerLinkActive="active" routerLink="/login">Login</a>
-                </li>
-                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" *ngIf="!isAuthenticated">
-									<a class="nav-link" routerLinkActive="active" routerLink="/register">Register</a>
-								</li>
-								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" *ngIf="isAuthenticated">
-									<a class="nav-link" routerLinkActive="active" routerLink="/logout" (click)="onLogout()">Log Out</a>
-								</li>
-							</ul>
-						</div>
-						
-					</nav>		
-				</div>
-			</div>
-		</div>
-	</div>
+  <body class="hero-anime">
 
-</body>
+    <head>
+      <title></title>
+      <script>
+
+
+  /* Please ❤ this if you like it! */
+
+
+  (function($) { "use strict";
+
+  $(function() {
+    var header = $(".start-style");
+    $(window).scroll(function() {    
+      var scroll = $(window).scrollTop();
+    
+      if (scroll >= 10) {
+        header.removeClass('start-style').addClass("scroll-on");
+      } else {
+        header.removeClass("scroll-on").addClass('start-style');
+      }
+    });
+  });		
+    
+  //Animation
+
+  $(document).ready(function() {
+    $('body.hero-anime').removeClass('hero-anime');
+  });
+
+  //Menu On Hover
+    
+  $('body').on('mouseenter mouseleave','.nav-item',function(e){
+      if ($(window).width() > 750) {
+        var _d=$(e.target).closest('.nav-item');_d.addClass('show');
+        setTimeout(function(){
+        _d[_d.is(':hover')?'addClass':'removeClass']('show');
+        },1);
+      }
+  });	
+
+  //Switch light/dark
+
+  $("#switch").on('click', function () {
+    if ($("body").hasClass("dark")) {
+      $("body").removeClass("dark");
+      $("#switch").removeClass("switched");
+    }
+    else {
+      $("body").addClass("dark");
+      $("#switch").addClass("switched");
+    }
+  });  
+
+  })(jQuery); 
+      </script>
+    </head>
+
+    <div class="navigation-wrap bg-light start-header start-style">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="navbar navbar-expand-md navbar-light">
+            
+              <a class="navbar-brand page-scroll" href="/">FootyGasm</a>
+              
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto py-4 py-md-0">
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/">Home</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLinkActive="active" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" routerLinkActive="active" routerLink="/products/products-list">Men</a>
+                      <a class="dropdown-item" routerLinkActive="active" routerLink="/products/products-list">Women</a>
+                      <a class="dropdown-item" routerLinkActive="active" routerLink="/products/products-list">Children</a>
+                    </div>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLinkActive="active" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" routerLinkActive="active" routerLink="/about">About us</a>
+                      <a class="dropdown-item" routerLinkActive="active" routerLink="/team">Team</a>
+                      <a class="dropdown-item" routerLinkActive="active" routerLink="/portfolio">Portfolio</a>
+                      <a class="dropdown-item" routerLinkActive="active" routerLink="/contact">Contact us</a>
+                    </div>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" routerLinkActive="active" routerLink="products/cart">Cart</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" *ngIf="!isAuthenticated">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/login">Login</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" *ngIf="!isAuthenticated">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/register">Register</a>
+                  </li>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4" *ngIf="isAuthenticated">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/logout" (click)="onLogout()">Log Out</a>
+                  </li>
+                </ul>
+              </div>
+              
+            </nav>		
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

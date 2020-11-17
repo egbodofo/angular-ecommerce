@@ -1,32 +1,41 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <div class="col-lg-12 text-center">
-      <h1 class="display-4">Create a product</h1>
-  </div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Create Product</title>
+  </head>
 
-<div id="register" *ngIf="!submitted" class="create-form">
-  <form>
-    <div class="section">Create Product</div>
-      <div class="inner-wrap">
-          <label>Name <input type="text" required name="name" [(ngModel)]="product.name" /></label>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="col-lg-12 text-center">
+          <h1 class="display-4">Create a product</h1>
       </div>
-      <div class="inner-wrap">
-        <label>Price <input type="number" required name="price" [(ngModel)]="product.price" /></label>
       </div>
-      <div class="inner-wrap">
-        <label>image <input type="text" required name="image" [(ngModel)]="product.image" /></label>
-      </div>
-      <div class="inner-wrap">
-        <label>Brand <input type="text" required name="brand" [(ngModel)]="product.brand" /></label>
-      </div>
-      <div class="inner-wrap">
-        <label>Description <input type="text" required name="description" [(ngModel)]="product.description" /></label>
-      </div>
+    </div>
 
-      <div class="button-section">
-        <input type="submit" name="Create" (click)="createProduct()"  />
-      </div>
-  </form>
-</div>
+    <div id="register" *ngIf="!submitted" class="create-form">
+      <form>
+        <div class="section">Create Product</div>
+          <div class="inner-wrap">
+              <label>Name <input type="text" required name="name" [(ngModel)]="product.name" /></label>
+          </div>
+          <div class="inner-wrap">
+            <label>Price <input type="number" required name="price" [(ngModel)]="product.price" /></label>
+          </div>
+          <div class="inner-wrap">
+            <label>image <input type="text" required name="image" [(ngModel)]="product.image" /></label>
+          </div>
+          <div class="inner-wrap">
+            <label>Brand <input type="text" required name="brand" [(ngModel)]="product.brand" /></label>
+          </div>
+          <div class="inner-wrap">
+            <label>Description <input type="text" required name="description" [(ngModel)]="product.description" /></label>
+          </div>
+
+          <div class="button-section">
+            <input type="submit" name="Create" (click)="createProduct()"  />
+          </div>
+      </form>
+    </div>
+  </body>
+</html>

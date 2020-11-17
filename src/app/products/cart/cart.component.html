@@ -1,88 +1,97 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <div class="col-lg-12 text-center">
-      <h1 class="display-4">Your Bag!</h1>
-  </div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cart</title>
+  </head>
 
-<!-- <section ngif="!hasData">
-  <div>
-    <p>Hello</p>
-  </div>
-</section> -->
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="col-lg-12 text-center">
+          <h1 class="display-4">Your Bag!</h1>
+      </div>
+      </div>
+    </div>
 
-<section class="page my-5 h-100">
-	<div id="store_cart">
-		<ul class="cart_head">
-			<li class="cart_head_title">
-				My Cart
-			</li>
-			<li class="cart_head_product">
-				Product Name
-			</li>
-			<li class="cart_head_options">
-				Edit Qty
-			</li>
-			<li class="cart_head_price">
-				Price
-			</li>
-		</ul>
+    <!-- <section ngif="!hasData">
+      <div>
+        <p>Hello</p>
+      </div>
+    </section> -->
 
-		<ul class="cart_item" *ngFor="let product of cartProducts | async">
+    <section class="page my-5 h-100">
+      <div id="store_cart">
+        <ul class="cart_head">
+          <li class="cart_head_title">
+            My Cart
+          </li>
+          <li class="cart_head_product">
+            Product Name
+          </li>
+          <li class="cart_head_options">
+            Edit Qty
+          </li>
+          <li class="cart_head_price">
+            Price
+          </li>
+        </ul>
 
-			<li class="cart_img_col">
-				<img src="{{ product.image }}">
-			</li>
+        <ul class="cart_item" *ngFor="let product of cartProducts | async">
 
-			<li class="cart_product_col">
-				<p>{{ product.name }}</p>
-			</li>
+          <li class="cart_img_col">
+            <img src="{{ product.image }}">
+          </li>
 
-      	<li class="cart_options_col">
-				<span>Quantity: </span>
-          <div
-          class="def-number-input number-input safari_only mb-0"
-        >
-          <button
-            class="fa fa-minus"
-            (click)="subQuantity(product._id)"
-          ></button>
-          <input
-            class="quantity w-25 text-center border-0"
-            min="0"
-            name="quantity"
-            value="{{ product.quantity }}"
-            type="number"
-          />
-          <button
-            class="fa fa-plus"
-            (click)="addQuantity(product._id)"
-          ></button>
+          <li class="cart_product_col">
+            <p>{{ product.name }}</p>
+          </li>
+
+            <li class="cart_options_col">
+            <span>Quantity: </span>
+              <div
+              class="def-number-input number-input safari_only mb-0"
+            >
+              <button
+                class="fa fa-minus"
+                (click)="subQuantity(product._id)"
+              ></button>
+              <input
+                class="quantity w-25 text-center border-0"
+                min="0"
+                name="quantity"
+                value="{{ product.quantity }}"
+                type="number"
+              />
+              <button
+                class="fa fa-plus"
+                (click)="addQuantity(product._id)"
+              ></button>
+            </div>
+          </li>
+
+          <li class="cart_price_col">
+            <h2>#{{ product.price * product.quantity }}</h2>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="mt-4 mb-4 bag-total">
+        <div class="p-4">
+          <h5 class="mb-3">You are to pay <span>#{{ total }}. 00 NGR</span> in total</h5>
         </div>
-			</li>
 
-			<li class="cart_price_col">
-				<h2>#{{ product.price * product.quantity }}</h2>
-			</li>
-    </ul>
+          <div class="button-container my-4">
+            <button routerLink="/products/checkout" class="mx-2 btn btn-outline-success p-2">
+              Go To Checkout
+            </button>
 
-  </div>
+            <button routerLink="/products/products-list" class="mx-2 btn btn-outline-primary p-2">
+              Continue To Shopping
+            </button>
+        </div>
+      </div>
 
-  <div class="mt-4 mb-4 bag-total">
-    <div class="p-4">
-      <h5 class="mb-3">You are to pay <span>#{{ total }}. 00 NGR</span> in total</h5>
-    </div>
-
-      <div class="button-container my-4">
-        <button routerLink="/products/checkout" class="mx-2 btn btn-outline-success p-2">
-          Go To Checkout
-        </button>
-
-        <button routerLink="/products/products-list" class="mx-2 btn btn-outline-primary p-2">
-          Continue To Shopping
-        </button>
-    </div>
-  </div>
-
-</section>
+    </section>
+  </body>
+</html>

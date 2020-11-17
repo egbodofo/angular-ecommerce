@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { StoreModule } from '@ngrx/store';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { StoreModule } from '@ngrx/store';
     LoginComponent,
     RegisterComponent,
     HeaderComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,

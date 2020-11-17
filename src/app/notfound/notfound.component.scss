@@ -1,0 +1,46 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  margin: 40px auto;
+}
+
+.notfound {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  height: 100%;
+  width: 100%;
+  image-rendering: optimizeQuality;
+  background: url(../../assets/images/404-page-cover.jpg);
+  background-repeat: no-repeat;;
+  background-position: center center;
+  background-repeat: none;
+  background-size: cover;
+  object-position: center;
+  object-fit: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  .img {
+    width: 1200px;
+    height: 100%;
+  }
+
+  .btn {
+    font-size:15px;
+    border-radius: 10px;
+    padding: 20px;
+
+
+    @media(min-width:768px) {
+      font-size: 30px;
+    }
+
+  }
+
+
+}

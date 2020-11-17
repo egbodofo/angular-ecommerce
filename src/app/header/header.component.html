@@ -1,115 +1,113 @@
-<head>
-  <title></title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
 
-  <script>
-      $('#myCarousel').carousel({
-        interval: 3000
-      });
+    <script>
+        $('#myCarousel').carousel({
+          interval: 3000
+        });
 
-      window.sr = ScrollReveal({ reset: true });
+        window.sr = ScrollReveal({ reset: true });
 
-      sr.reveal('.company-stuff', { duration: 700 });
-  </script>
-  
-  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-</head>
+        sr.reveal('.company-stuff', { duration: 700 });
+    </script>
+    
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  </head>
 
-<body id="page-top" class="index" data-pinterest-extension-installed="cr1.3.4">
+  <body id="page-top" class="index" data-pinterest-extension-installed="cr1.3.4">
 
-  <!-- Header Section -->
-    <header>
-      <div class="container">
-          <div class="intro-text">
-              <div class="intro-lead-in">Welcome to FootyGasm</div>
-              <div class="intro-heading">Bring power to your steps!</div>
-              <a routerLink="/products/products-list" routerLinkActive="router-link-active"  class="page-scroll btn btn-xl">View All Products</a>
-          </div>
-      </div>
-  </header>
-
-  <!-- Products Section -->
-  <section id="Products">
-      <div class="container">
-          <div class="row" id="my-row">
-              <div class="col-lg-12 text-center">
-                  <h2 class="section-heading">New Arrivals</h2>
-                  <h3 class="section-subheading text-muted">Check out our latest brands and style</h3>
-              </div>
-          </div>
-          
-          <div class="row" id="my-row">
-              <div 
-              *ngFor="let product of products; let i = index"
-              [class.active]="i == currentIndex"
-              (click)="setCurrentProduct(product, i)"
-              class="col-12 col-md-4 card m-1 text-center header-card">
-                  <div>
-                    <img style="max-width: 250px; max-height: 250px;" class="card-img card-img-top pt-2" src="{{ product.image }}" alt="{{ product.name }}">
-                  </div>
-                  <h4 class="service-heading">{{ product.name }}</h4>
-                  <p class="text-muted">{{ product.brand }}</p>
-                  <button style="width: 150px;" class="btn btn-success mb-4" routerLink="/products/{{ product._id }}">Details</button>
-              </div>
-          </div>
-
-          <div class="container my-cont">
-              
-            <div class="text-area text-center">
-              <h1>Customer Reviews</h1>
+    <!-- Header Section -->
+      <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Welcome to FootyGasm</div>
+                <div class="intro-heading">Bring power to your steps!</div>
+                <a routerLink="/products/products-list" routerLinkActive="router-link-active"  class="page-scroll btn btn-xl">View All Products</a>
             </div>
+        </div>
+    </header>
 
-           <div class='row'>
-              <div class='col-md-8 offset-lg-2'>
+    <!-- Products Section -->
+    <section id="Products">
+        <div class="container">
+            <div class="row" id="my-row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">New Arrivals</h2>
+                    <h3 class="section-subheading text-muted">Check out our latest brands and style</h3>
+                </div>
+            </div>
+            
+            <div class="row" id="my-row">
+                <div 
+                *ngFor="let product of products; let i = index"
+                [class.active]="i == currentIndex"
+                (click)="setCurrentProduct(product, i)"
+                class="col-12 col-md-4 card m-1 text-center header-card">
+                    <div>
+                      <img style="max-width: 250px; max-height: 250px;" class="card-img card-img-top pt-2" src="{{ product.image }}" alt="{{ product.name }}">
+                    </div>
+                    <h4 class="service-heading">{{ product.name }}</h4>
+                    <p class="text-muted">{{ product.brand }}</p>
+                    <button style="width: 150px;" class="btn btn-success mb-4" routerLink="/products/{{ product._id }}">Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+      <div class="container my-cont">
                 
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                  <div class="carousel-inner" role="listbox">
-                  
-                  <!-- Quote 1 -->
-                    <div class="carousel-item active">
-                      <blockquote>
-                        <div class="row">
-                          <div class="col-10 offset-1">
-                            <p>“You can never take too much care over the choice of your shoes. Too many women think that they are unimportant, but the real proof of an elegant woman is what is on her feet.”</p>
-                            <small>— Christian Dior.</small>
-                          </div>
-                        </div>
-                      </blockquote>
-                  </div>
-                    
-                  <div class="carousel-item">
-                    <blockquote>
-                        <div class="row">
-                          <div class="col-10 offset-1">
-                            <p>"The fact is, sometimes it’s hard to walk in a single woman’s shoes. That’s why we need really special ones now and then – to make the walk a little more fun."</p>
-                            <small>– Carrie Bradshaw.</small>
-                          </div>
-                        </div>
-                      </blockquote>
-                  </div>
-                    
-                  <div class="carousel-item">
-                    <blockquote>
-                        <div class="row">
-                          <div class="col-10 offset-1">
-                            <p>"Craziness in a shoe is great – you can have much more freedom, you can exaggerate and it doesn’t feel stupid. But to have too much craziness near your face, that would just feel weird."</p>
-                            <small>– Miuccia Prada.</small>
-                          </div>
-                        </div>
-                      </blockquote>
-                  </div> <!-- .item -->
-                    
-                </div> <!-- .carousel-inner -->
-              </div>  <!-- #my-carousel -->
-             </div>
-            </div>
-          </div>
-          
+        <div class="text-area text-center">
+          <h1>Customer Reviews</h1>
+        </div>
+
+      <div class='row'>
+          <div class='col-md-8 offset-lg-2'>
+            
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+              
+              <!-- Quote 1 -->
+                <div class="carousel-item active">
+                  <blockquote>
+                    <div class="row">
+                      <div class="col-10 offset-1">
+                        <p>“You can never take too much care over the choice of your shoes. Too many women think that they are unimportant, but the real proof of an elegant woman is what is on her feet.”</p>
+                        <small>— Christian Dior.</small>
+                      </div>
+                    </div>
+                  </blockquote>
+              </div>
+                
+              <div class="carousel-item">
+                <blockquote>
+                    <div class="row">
+                      <div class="col-10 offset-1">
+                        <p>"The fact is, sometimes it’s hard to walk in a single woman’s shoes. That’s why we need really special ones now and then – to make the walk a little more fun."</p>
+                        <small>– Carrie Bradshaw.</small>
+                      </div>
+                    </div>
+                  </blockquote>
+              </div>
+                
+              <div class="carousel-item">
+                <blockquote>
+                    <div class="row">
+                      <div class="col-10 offset-1">
+                        <p>"Craziness in a shoe is great – you can have much more freedom, you can exaggerate and it doesn’t feel stupid. But to have too much craziness near your face, that would just feel weird."</p>
+                        <small>– Miuccia Prada.</small>
+                      </div>
+                    </div>
+                  </blockquote>
+              </div> <!-- .item -->
+                
+            </div> <!-- .carousel-inner -->
+          </div>  <!-- #my-carousel -->
+        </div>
+        </div>
       </div>
-  </section>
-
-
-
-
-
-
-</body>
+    </section>
+  </body>
+</html>
