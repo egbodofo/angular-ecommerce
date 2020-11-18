@@ -44,12 +44,4 @@ export const ProductRoutes: Routes = [
       },
     ],
   },
-  // {
-  //   path: '404',
-  //   component: NotfoundComponent
-  // },
-  // {
-  //   path: '**',
-  //   redirectTo: '/404'
-  // }
 ];
