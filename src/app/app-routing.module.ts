@@ -8,7 +8,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { RegisterComponent } from './register/register.component';
 import { TeamComponent } from './team/team.component';
-import { NotfoundComponent } from './notfound/notfound.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
