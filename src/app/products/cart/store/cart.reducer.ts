@@ -1,5 +1,4 @@
 import * as CartActions from './cart.actions';
-
 export interface State {
   addedItems: Array<any>;
   total: number;

@@ -3,11 +3,9 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
 import { ProductsModule } from './products/products.module';
 import * as fromApp from './store/app.reducer';
 import { CommonModule } from '@angular/common';
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +20,6 @@ import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { StoreModule } from '@ngrx/store';
 import { NotfoundComponent } from './notfound/notfound.component';
-
 @NgModule({
   declarations: [
     AppComponent,

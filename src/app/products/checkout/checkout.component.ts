@@ -3,8 +3,6 @@ import { Store } from '@ngrx/store';
 import * as fromApp from '../../store/app.reducer';
 import { Observable } from 'rxjs';
 import * as cartActions from '../cart/store/cart.actions';
-
-
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',

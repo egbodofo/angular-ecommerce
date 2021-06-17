@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AccountService } from '../services/account.service';
-
-
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',

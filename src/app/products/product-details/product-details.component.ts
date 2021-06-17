@@ -7,7 +7,6 @@ import { AccountService } from '../../services/account.service';
 import { Store } from '@ngrx/store';
 import * as fromApp from '../../store/app.reducer';
 import * as CartActions from '../cart/store/cart.actions';
-
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',

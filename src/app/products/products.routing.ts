@@ -8,8 +8,6 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { PayComponent } from './pay/pay.component';
 import { AuthGuard } from '../auth.guard';
 
-
-
 export const ProductRoutes: Routes = [
   {
     path: 'products',

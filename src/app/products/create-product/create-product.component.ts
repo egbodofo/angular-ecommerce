@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-create-product',
   templateUrl: './create-product.component.html',
@@ -56,6 +55,4 @@ export class CreateProductComponent implements OnInit {
       description: '',
     };
   }
-
-
 }
